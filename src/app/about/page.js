@@ -1,14 +1,16 @@
-import React from 'react'
+import React from "react";
+import AboutHero from "../components/About/AboutHero";
+import AboutContent from "../components/About/AboutContent";
+import StatsCounter from "../components/About/StatsCounter";
+import TeamGrid from "../components/About/TeamGrid";
 
-const page = () => {
+export default function AboutPage() {
   return (
-    <div>
-      <h1>This is about page.</h1>
-    </div>
-  )
-}
-
-export default page
-export const metadata={
-  title:"About "
+    <main>
+      <AboutHero />
+      <AboutContent />
+      <StatsCounter />
+      <TeamGrid />
+    </main>
+  );
 }
