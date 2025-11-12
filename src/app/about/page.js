@@ -1,13 +1,14 @@
 import React from 'react'
 
-import Counter from './components/Counter'
-
 const page = () => {
   return (
     <div>
-      <Counter/>
+      <h1>This is about page.</h1>
     </div>
   )
 }
 
 export default page
+export const metadata={
+  title:"About "
+}

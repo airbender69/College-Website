@@ -1,11 +1,10 @@
 import React from 'react'
 
-import Counter from './components/Counter'
-
 const page = () => {
   return (
     <div>
-      <Counter/>
+        <h1>This is login page</h1>
+      
     </div>
   )
 }

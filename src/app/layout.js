@@ -1,6 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
+import { ThemeProvider } from '@mui/material/styles';
 import "./globals.css";
-
+import theme from "../theme"
+import Navigation from "./components/Navigation";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -22,7 +25,19 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+       <AppRouterCacheProvider>
+           <ThemeProvider theme={theme}>
+           <Navigation className="fixed top-0"/>
+           <div className="mx-auto container min-h-screen">
+              {children}   
+           </div>
+            
+              <footer className="text-center">
+                <p>2025 @ Sohan Achhami.</p>
+                </footer>
+           </ThemeProvider>
+          </AppRouterCacheProvider>
+        
       </body>
     </html>
   );
