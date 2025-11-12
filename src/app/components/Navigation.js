@@ -10,8 +10,15 @@ const Navigation = () => {
      <nav>
         <div className='flex  justify-around items-center p-3'>
        <div>
-         <Image src="https://softwarica.edu.np/file-manager/photos/1/Logo.svg" width={200} height={200}
-        alt='softwarica'/> </div>
+        <Link href="/">
+              <Image
+                src="https://softwarica.edu.np/file-manager/photos/1/Logo.svg"
+                width={200}
+                height={200}
+                alt="softwarica"
+                className="cursor-pointer"
+              />
+            </Link> </div>
        <div className='flex justify-center items-center gap-5 max-md:hidden text-sm font-bold'>
       
            <Link href="/about">ABOUT US</Link>
@@ -35,3 +42,5 @@ const Navigation = () => {
 }
 
 export default Navigation
+
+
