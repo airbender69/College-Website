@@ -1,25 +1,28 @@
-// export default Hero
+"use client";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function Hero() {
+const [currentImage,setCurrentImage]=useState('/Rectangle.jpg');
+
+  useEffect(() => {
+    const image=['/Rectangle.jpg','/softwarica.png']
+    let index=0;
+    setInterval(()=>{
+        index=(index+1)%image.length;
+        setCurrentImage(image[index])
+    },3000)
+  }, [])
+  
   return (
-    <section className="relative h-[80vh] w-full">
-      {/* Background image */}
+    <div className="relative h-[80vh] w-full">
       <Image
-        src="/Rectangle.jpg"
-        alt="hero_image_of_softwarica"
+        src={currentImage}
+        alt="hero image"
         fill
-        priority
-        className="object-cover"
+        className="object-cover transition-all duration-700"
       />
-
-      {/* Dark overlay for readability (like the reference site) */}
-      <div className="absolute inset-0 bg-black/35" />
-
-      {/* (Optional) Hero content area — keep empty for now */}
-      <div className="absolute inset-0 flex items-end p-6">
-        {/* add buttons/text here later if you want */}
-      </div>
-    </section>
+      <div className="absolute inset-0 bg-black/35"></div>
+    </div>
   );
 }
