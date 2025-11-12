@@ -1,11 +1,12 @@
 import React from 'react'
+import Hero from './components/Hero/Hero'
 
-import Counter from './components/Counter'
 
 const page = () => {
   return (
     <div>
-      <Counter/>
+      {/* <Counter/> */}
+      <Hero/>
     </div>
   )
 }
