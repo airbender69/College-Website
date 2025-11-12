@@ -9,9 +9,11 @@ const Navigation = () => {
     <div>
      <nav>
         <div className='flex  justify-around items-center p-3'>
-       <div> <Image src="https://softwarica.edu.np/file-manager/photos/1/Logo.svg" width={200} height={200}
+       <div>
+         <Image src="https://softwarica.edu.np/file-manager/photos/1/Logo.svg" width={200} height={200}
         alt='softwarica'/> </div>
        <div className='flex justify-center items-center gap-5 max-md:hidden text-sm font-bold'>
+      
            <Link href="/about">ABOUT US</Link>
             <Link href="/interstudent">INTERNATIONAL STUDENT</Link>
             <Link href="/studentcentre">STUDENT CENTRE</Link>

@@ -27,7 +27,8 @@ export default function RootLayout({ children }) {
       >
        <AppRouterCacheProvider>
            <ThemeProvider theme={theme}>
-           <Navigation className="fixed top-0"/>
+           <Navigation className="fixed top-0 left-0 right-0 z-50"/>
+
            <div className="mx-auto container min-h-screen">
               {children}   
            </div>
